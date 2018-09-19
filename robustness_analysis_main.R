@@ -4,12 +4,13 @@
 #############################################################
 
 # Created: 17/09/18
-# Last edited: 17/09/18
+# Last edited: 19/09/18
 # Edit history:
 ### 17/09/18: Copied from original scripts. 
+### 19/09/18: Corrected typo.
 
 # Description:
-# Robustness analysis for the SYN-GNP network. Other networks, and their associated .RData files, follow the
+# Robustness analysis for the SYN-PVX network. Other networks, and their associated .RData files, follow the
 # same general framework.
 
 source("robustness_analysis_aux.R")
