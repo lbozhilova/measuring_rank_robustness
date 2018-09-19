@@ -4,9 +4,10 @@
 #############################################################
 
 # Created: 17/09/18
-# Last edited: 17/09/18
+# Last edited: 19/09/18
 # Edit history:
-### 17/09/18: Copied from original scripts. 
+### 17/09/18: Copied from original scripts.
+### 19/09/18: Fixed dotted lines in PIN identifiability plots.
 
 # Description:
 # Figure and table generation for robustness analysis figures.
@@ -185,7 +186,7 @@ figs5 <- ggplot(subset(df1, !(metric %in% metrics.loud)), aes(x=threshold*.001, 
   scale_y_continuous("Similarity") +
   scale_colour_manual(name="Network", values = col_lyuba, labels=c("PVX", "ECOLI", "YEAST", "HPRED")) + 
   geom_hline(yintercept=.90) +
-  geom_vline(xintercept=c(0.15, 0.28), linetype="dotted", colour=col_lyuba[4] +
+  geom_vline(xintercept=c(0.15, 0.28), linetype="dotted", colour=col_lyuba[4]) +
   geom_vline(xintercept=c(0.6, 0.9), linetype="dotted", colour="black")
 figs5
 
