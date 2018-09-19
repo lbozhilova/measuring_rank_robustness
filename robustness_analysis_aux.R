@@ -4,9 +4,10 @@
 ##################################################################
 
 # Created: 17/09/18
-# Last edited: 17/09/18
+# Last edited: 19/09/18
 # Edit history:
 ### 17/09/18: Copied from original scripts. 
+### 19/09/18: Added NaN handling in continuity.score()
 
 # Description:
 # Functions for rank robustness analysis.
@@ -92,7 +93,7 @@ continuity.df <- function(rank.df, k=seq(0, 0.05, 0.001), th_gap=10){
 
 #----- Continuity (score) -----#
 continuity.score <- function(cont.df, lower.b=150, upper.b=990, alpha=0.9){
-  cont.df <- subset(cont.df, lb>=lower.b & ub <=upper.b)
+  cont.df <- subset(cont.df, lb>=lower.b & ub <=upper.b & !(is.nan(score)))
   metrics <- levels(cont.df$metric)
   aux <- function(mc){
     c.df <- subset(cont.df, metric==mc)
