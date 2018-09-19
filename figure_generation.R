@@ -159,7 +159,7 @@ fig3.pin <- ggplot(df1, aes(x=threshold*.001, y=score, colour=Network)) +
   scale_y_continuous("Similarity") +
   scale_colour_manual(name="Network", values = col_lyuba, labels=c("PVX", "ECOLI", "YEAST", "HPRED")) + 
   geom_hline(yintercept=.90) +
-  geom_vline(xintercept=c(0.15, 0.28), linetype="dotted", colour=col_lyuba[5]) +
+  geom_vline(xintercept=c(0.15, 0.28), linetype="dotted", colour=col_lyuba[4]) +
   geom_vline(xintercept=c(0.6, 0.9), linetype="dotted", colour="black")
 fig3.pin
 fig3.syn <- ggplot(df2, aes(x=threshold*.001, y=score, colour=Network)) + 
@@ -185,7 +185,7 @@ figs5 <- ggplot(subset(df1, !(metric %in% metrics.loud)), aes(x=threshold*.001, 
   scale_y_continuous("Similarity") +
   scale_colour_manual(name="Network", values = col_lyuba, labels=c("PVX", "ECOLI", "YEAST", "HPRED")) + 
   geom_hline(yintercept=.90) +
-  geom_vline(xintercept=c(0.15, 0.28), linetype="dotted", colour=col_lyuba[5]) +
+  geom_vline(xintercept=c(0.15, 0.28), linetype="dotted", colour=col_lyuba[4] +
   geom_vline(xintercept=c(0.6, 0.9), linetype="dotted", colour="black")
 figs5
 
@@ -197,7 +197,7 @@ figs6 <- ggplot(subset(df1, (metric %in% metrics.loud)), aes(x=threshold*.001, y
   scale_y_continuous("Similarity") +
   scale_colour_manual(name="Network", values = col_lyuba, labels=c("PVX", "ECOLI", "YEAST", "HPRED")) + 
   geom_hline(yintercept=.90) +
-  geom_vline(xintercept=c(0.15, 0.28), linetype="dotted", colour=col_lyuba[5]) +
+  geom_vline(xintercept=c(0.15, 0.28), linetype="dotted", colour=col_lyuba[4]) +
   geom_vline(xintercept=c(0.6, 0.9), linetype="dotted", colour="black")
 figs6
 
