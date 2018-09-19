@@ -41,7 +41,7 @@ The auxiliary file contains standard and LOUD node metric extraction functions, 
 * `pvx_syn_C.RData`
 
 These are generated in `metric_extraction_main.R`, and are then merged to a data frame `pvx.syn.metrics.df`, which is stored in 
-`F_pvx_syn_metrics.RData`. Dataframes for the other networks follow the same naming convention of `NETWORK.NAME.metrics.df` and are stored in their respective `F_NETWORKNAME.RData` files.
+`F_pvx_syn_metrics.RData`. Dataframes for the other networks follow the same naming convention of `NETWORK.NAME.metrics.df` and are stored in their respective `F_NETWORKNAME.RData` files. These can be found on the [OPIG website](http://opig.stats.ox.ac.uk/resources).
 
 ## 3. Ranking and robustness analysis
 All ranking and robustness analysis is handled by
