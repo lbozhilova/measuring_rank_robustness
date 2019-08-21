@@ -46,7 +46,6 @@ fig2.pin <- ggplot(df.pin, aes(x=lb*.001, y=score, colour=Network)) +
   scale_x_continuous("Threshold", breaks=c(seq(0.15, 0.9, 0.15), 1), limits=c(0.15,1)) +
   scale_y_continuous("Similarity") +
   scale_colour_manual(name="Network", values = col_lyuba, labels=c("PVX", "ECOLI", "YEAST", "HPRED")) + 
-  scale_linetype_manual(values=ltps) +
   geom_hline(yintercept=.90)
 fig2.syn <- ggplot(df.syn, aes(x=lb*.001, y=score, colour=Network)) + 
   theme_lyuba +
@@ -54,7 +53,6 @@ fig2.syn <- ggplot(df.syn, aes(x=lb*.001, y=score, colour=Network)) +
   scale_x_continuous("Threshold", breaks=c(seq(0.15, 0.9, 0.15), 1), limits=c(0.15,1)) +
   scale_y_continuous("Similarity") +
   scale_colour_manual(name="Network", values = col_lyuba_2, c("SYN-GNP", "SYN-PVX")) + 
-  scale_linetype_manual(values=ltps) +
   geom_hline(yintercept=.90)
 plotDouble(fig2.pin, fig2.syn)
 
